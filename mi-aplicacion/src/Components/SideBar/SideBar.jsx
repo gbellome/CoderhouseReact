@@ -69,7 +69,7 @@ const SideBar = () => {
 
               <li className='nav-link'>
                 <a href=''>
-                <i class='bx bx-trip icon'></i>
+                <i className='bx bx-trip icon'></i>
                   <span className='text nav-text'>Rutas</span>
                 </a>
               </li>
@@ -98,10 +98,6 @@ const SideBar = () => {
         </div>
 
       </nav>
-
-      <section className='home'>
-        <div className='text'>E Commerce</div>
-      </section>
 
       {/* <script>
                 const body = document.querySelector('body'),
