@@ -1,10 +1,11 @@
 import React from 'react'
 import Bell from '../Bell/Bell'
+import CartWidget from '../CartWidget/cartWidget'
 
 const SideBar = () => {
   return (
     <div className='App'>
-      <nav className='sidebar close'>
+      <nav className='sidebar'>
         <header>
           <div className='image-text'>
             <span className='image'>
@@ -25,28 +26,28 @@ const SideBar = () => {
 
             <li className='search-box'>
               <i className='bx bx-search icon'></i>
-              <input type='text' placeholder='Search...' />
+              <input type='text' placeholder='Buscar...' />
             </li>
 
             <ul className='menu-links'>
               <li className='nav-link'>
                 <a href=''>
                   <i className='bx bx-home-alt icon' ></i>
-                  <span className='text nav-text'>Dashboard</span>
+                  <span className='text nav-text'>Inicio</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
                   <i className='bx bx-customize icon' ></i>
-                  <span className='text nav-text'>Analisis</span>
+                  <span className='text nav-text'>Editar</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
                   <Bell 
-                    onTada
+                    /* onTada */
                   />
                   <span className='text nav-text'>Notificaciones</span>
                 </a>
@@ -62,14 +63,14 @@ const SideBar = () => {
               <li className='nav-link'>
                 <a href=''>
                   <i className='bx bx-heart icon' ></i>
-                  <span className='text nav-text'>Likes</span>
+                  <span className='text nav-text'>Favoritos</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
                 <i class='bx bx-trip icon'></i>
-                  <span className='text nav-text'>Carrito</span>
+                  <span className='text nav-text'>Rutas</span>
                 </a>
               </li>
 
@@ -78,10 +79,7 @@ const SideBar = () => {
 
           <div className='bottom-content'>
             <li className=''>
-              <a href=''>
-                <i className='bx bx-log-out icon' ></i>
-                <span className='text nav-text'>Logout</span>
-              </a>
+              <CartWidget/>
             </li>
 
             <li className='mode'>
