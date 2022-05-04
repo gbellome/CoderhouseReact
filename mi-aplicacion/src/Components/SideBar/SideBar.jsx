@@ -1,5 +1,4 @@
 import React from 'react'
-import Bell from '../Bell/Bell'
 import CartWidget from '../CartWidget/cartWidget'
 
 const SideBar = () => {
@@ -9,12 +8,12 @@ const SideBar = () => {
         <header>
           <div className='image-text'>
             <span className='image'>
-            <i className='bx bxs-plane-alt'></i>
+            <i className='bx bxs-wine'></i>
             </span>
 
             <div className='text logo-text'>
               <span className='name'>Gabriel Bellome</span>
-              <span className='profession'>React Developers</span>
+              <span className='profession'>Wine Taster</span>
             </div>
           </div>
 
@@ -32,31 +31,29 @@ const SideBar = () => {
             <ul className='menu-links'>
               <li className='nav-link'>
                 <a href=''>
-                  <i className='bx bx-home-alt icon' ></i>
+                <i className='bx bx-store-alt icon'></i>
                   <span className='text nav-text'>Inicio</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
-                  <i className='bx bx-customize icon' ></i>
-                  <span className='text nav-text'>Editar</span>
+                <i className='bx bx-purchase-tag icon'></i>
+                  <span className='text nav-text'>Combos</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
-                  <Bell 
-                    /* onTada */
-                  />
-                  <span className='text nav-text'>Notificaciones</span>
+                <i className='bx bx-package icon' ></i>
+                  <span className='text nav-text'>Cajas</span>
                 </a>
               </li>
 
               <li className='nav-link'>
                 <a href=''>
-                  <i className='bx bx-pie-chart-alt icon' ></i>
-                  <span className='text nav-text'>Graficos</span>
+                <i className='bx bxs-offer icon' ></i>
+                  <span className='text nav-text'>Ofertas</span>
                 </a>
               </li>
 
@@ -70,7 +67,7 @@ const SideBar = () => {
               <li className='nav-link'>
                 <a href=''>
                 <i className='bx bx-trip icon'></i>
-                  <span className='text nav-text'>Rutas</span>
+                  <span className='text nav-text'>Por pais</span>
                 </a>
               </li>
 
@@ -78,9 +75,7 @@ const SideBar = () => {
           </div>
 
           <div className='bottom-content'>
-            <li className=''>
-              <CartWidget/>
-            </li>
+            <CartWidget/>
 
             <li className='mode'>
               <div className='sun-moon'>

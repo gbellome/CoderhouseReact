@@ -3,12 +3,14 @@ import ItemListContainer from './ItemListContainer'
 
 const CartWidget = () => {
   return (
-    <a href=''>
-        <i className='bx bx-cart icon' ></i>
+    <li className=''>
+      <a href="">
+        <i className='bx bx-cart icon'></i>
         <ItemListContainer
-            cantidad="5"
+          cantidad="5"
         />
-    </a>
+      </a>
+    </li>
   )
 }
 

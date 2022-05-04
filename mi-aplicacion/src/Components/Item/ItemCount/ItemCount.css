@@ -1,0 +1,17 @@
+.ItemCount {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Qty {
+    background: #FFF;
+    width: 50%;
+    border-radius: 0.25rem;
+}
+
+.Qty p{
+    height: 100%;
+    line-height: 40px;
+}

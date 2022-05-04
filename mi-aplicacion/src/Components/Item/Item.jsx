@@ -1,17 +1,30 @@
-import React from 'react'
 import ItemCount from './ItemCount/ItemCount'
+import './Item.css'
 
-const Item = () => {
+const Item = ({vinos}) => {
+
     return (
-        <div className="card m-5" style={{width : "300px"}}>
-            <div className="card-body">
-                <h5 className="card-title">Producto</h5>
-                <ItemCount
-                    stock="10"
-                    initial="1"
-                />
-            </div>
-        </div>
+        <>
+            {vinos.length > 0 ? (
+                vinos.map((vino, index) => {
+                    <>
+                        <div className="card m-5">
+                            <img src={vino.fondo} alt="fondo" className='card-img-top' />
+                            <div className="card-body">
+                                <h5 key={index} className="card-title">{vino.nombre}</h5>
+                                <p className='card-text'>${vino.precio}</p>
+                                <ItemCount
+                                    stock={vino.stock}
+                                    initial="1"
+                                />
+                            </div>
+                        </div>
+                    </>
+                })
+            ) : (
+                <h1>Cargando...</h1>
+            )}
+        </>
     )
 }
 

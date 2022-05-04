@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./ItemCount.css"
 
 const ItemCount = ({ stock, initial }) => {
 
@@ -13,12 +14,15 @@ const ItemCount = ({ stock, initial }) => {
     }
 
     return (
-        <div className="row">
-            <div className="col-2">
+
+        <div className="ItemCount">
+            <div className="Sub">
                 <button onClick={restar} className="btn btn-primary">-</button>
             </div>
-            <div className="col-7"><p className='text-center'>{contador}</p></div>
-            <div className="col-2">
+            <div className="Qty">
+                <p className='text-center'>{contador}</p>
+            </div>
+            <div className="Add">
                 <button onClick={sumar} className="btn btn-primary">+</button>
             </div>
         </div>
