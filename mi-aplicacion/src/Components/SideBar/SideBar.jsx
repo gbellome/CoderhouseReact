@@ -1,14 +1,20 @@
 import React from 'react'
 import CartWidget from '../CartWidget/cartWidget'
+import { NavLink } from 'react-router-dom'
 
 const SideBar = () => {
+
+
+
+
+
   return (
     <div className='App'>
       <nav className='sidebar'>
         <header>
           <div className='image-text'>
             <span className='image'>
-            <i className='bx bxs-wine'></i>
+              <i className='bx bxs-wine'></i>
             </span>
 
             <div className='text logo-text'>
@@ -30,52 +36,52 @@ const SideBar = () => {
 
             <ul className='menu-links'>
               <li className='nav-link'>
-                <a href=''>
-                <i className='bx bx-store-alt icon'></i>
+                <NavLink to="/">
+                  <i className='bx bx-store-alt icon'></i>
                   <span className='text nav-text'>Inicio</span>
-                </a>
+                </NavLink>
               </li>
 
               <li className='nav-link'>
-                <a href=''>
-                <i className='bx bx-purchase-tag icon'></i>
+                <NavLink to="/Combos">
+                  <i className='bx bx-purchase-tag icon'></i>
                   <span className='text nav-text'>Combos</span>
-                </a>
+                </NavLink>
               </li>
 
               <li className='nav-link'>
-                <a href=''>
-                <i className='bx bx-package icon' ></i>
+                <NavLink to="/Cajas">
+                  <i className='bx bx-package icon' ></i>
                   <span className='text nav-text'>Cajas</span>
-                </a>
+                </NavLink>
               </li>
 
               <li className='nav-link'>
-                <a href=''>
-                <i className='bx bxs-offer icon' ></i>
+                <NavLink to="/Ofertas">
+                  <i className='bx bxs-offer icon' ></i>
                   <span className='text nav-text'>Ofertas</span>
-                </a>
+                </NavLink>
               </li>
 
               <li className='nav-link'>
-                <a href=''>
+                <NavLink to="/Favoritos">
                   <i className='bx bx-heart icon' ></i>
                   <span className='text nav-text'>Favoritos</span>
-                </a>
+                </NavLink>
               </li>
 
               <li className='nav-link'>
-                <a href=''>
-                <i className='bx bx-trip icon'></i>
+                <NavLink to="/PorPais">
+                  <i className='bx bx-trip icon'></i>
                   <span className='text nav-text'>Por pais</span>
-                </a>
+                </NavLink>
               </li>
 
             </ul>
           </div>
 
           <div className='bottom-content'>
-            <CartWidget/>
+            <CartWidget />
 
             <li className='mode'>
               <div className='sun-moon'>
