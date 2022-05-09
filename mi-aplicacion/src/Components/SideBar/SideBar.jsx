@@ -1,15 +1,13 @@
 import React from 'react'
-import CartWidget from '../CartWidget/cartWidget'
+import './SideBar.css'
 import { NavLink } from 'react-router-dom'
+import CartWidget from '../CartWidget/cartWidget'
+import ModeDark from '../ModeDark/ModeDark'
 
 const SideBar = () => {
 
-
-
-
-
   return (
-    <div className='App'>
+    <>
       <nav className='sidebar'>
         <header>
           <div className='image-text'>
@@ -29,10 +27,10 @@ const SideBar = () => {
         <div className='menu-bar'>
           <div className='menu'>
 
-            <li className='search-box'>
+            {/* <li className='search-box'>
               <i className='bx bx-search icon'></i>
               <input type='text' placeholder='Buscar...' />
-            </li>
+            </li> */}
 
             <ul className='menu-links'>
               <li className='nav-link'>
@@ -82,52 +80,39 @@ const SideBar = () => {
 
           <div className='bottom-content'>
             <CartWidget />
-
-            <li className='mode'>
-              <div className='sun-moon'>
-                <i className='bx bx-moon icon moon'></i>
-                <i className='bx bx-sun icon sun'></i>
-              </div>
-              <span className='mode-text text'>Lado oscuro</span>
-
-              <div className='toggle-switch'>
-                <span className='switch'></span>
-              </div>
-            </li>
-
+            <ModeDark />
           </div>
         </div>
-
       </nav>
 
       {/* <script>
-                const body = document.querySelector('body'),
-                sidebar = body.querySelector('nav'),
-                toggle = body.querySelector(".toggle"),
-                searchBtn = body.querySelector(".search-box"),
-                modeSwitch = body.querySelector(".toggle-switch"),
-                modeText = body.querySelector(".mode-text");
+        const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
 
+        toggle.addEventListener("click" , () => {
+            sidebar.classList.toggle("close")
+        })
 
-                toggle.addEventListener("click" , () => {
-                    sidebar.classList.toggle("close")
-                })
+        searchBtn.addEventListener("click" , () =>{
+            sidebar.classList.remove("close")
+        })
 
-                searchBtn.addEventListener("click" , () =>{
-                    sidebar.classList.remove("close")
-                })
+        modeSwitch.addEventListener("click" , () =>{
+            body.classList.toggle("dark")
 
-                modeSwitch.addEventListener("click" , () =>{
-                    body.classList.toggle("dark")
-
-                    if (body.classList.contains("dark")){
-                        modeText.innerText = "Light mode"
-                    } else {
-                        modeText.innerText = "Dark mode"
-                    }
-                })
-            </script> */}
-    </div>
+            if (body.classList.contains("dark")){
+                modeText.innerText = "Lado claro"
+            } else {
+                modeText.innerText = "Lado oscuro"
+            }
+        })
+      </script> */
+      }
+    </>
   )
 }
 

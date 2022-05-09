@@ -1,0 +1,47 @@
+.ItemCount {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.Qty {
+    background: #FFF;
+    width: 50%;
+    border-radius: 0.25rem;
+}
+
+.Qty p{
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+
+.Sub, .Add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    appearance: none;
+    border: none;
+    background-color: #7d2ae8;
+    color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #7d2ae8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    box-shadow: 0px 4px 10px #7d2ae8;
+}
+
+p, span {
+    cursor: default;
+}

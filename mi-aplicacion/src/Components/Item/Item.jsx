@@ -1,29 +1,43 @@
-import ItemCount from './ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import './Item.css'
+import BotellaVino from '../../static/img/Botella Vino.png'
 
-const Item = ({vinos}) => {
+const Item = ({ nombre, precio, stock, fondo, index }) => {
 
     return (
         <>
-            {vinos.length > 0 ? (
-                vinos.map((vino, index) => {
-                    <>
-                        <div className="card m-5">
-                            <img src={vino.fondo} alt="fondo" className='card-img-top' />
-                            <div className="card-body">
-                                <h5 key={index} className="card-title">{vino.nombre}</h5>
-                                <p className='card-text'>${vino.precio}</p>
-                                <ItemCount
-                                    stock={vino.stock}
-                                    initial="1"
-                                />
-                            </div>
+            <div className="card">
+                <div className="card-content">
+                    <div className="card-header">
+                        <div className='card-image-background'>
+                            <img src={fondo} alt="fondo" />
                         </div>
-                    </>
-                })
-            ) : (
-                <h1>Cargando...</h1>
-            )}
+                        <div className="card-image-item">
+                            <img src={BotellaVino} alt="Botella" />
+                        </div>
+                        <div className="card-image-icons">
+                            <i className='bx bx-heart icon'></i>
+                        </div>
+                    </div>
+                    <div className="card-body">
+                        <div className="title-wines">
+                            <span className="name">{nombre}</span>
+                            <span className="price">${precio}</span>
+                        </div>
+                        <div className="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bx-star' ></i>
+                            <i class='bx bx-star' ></i>
+                        </div>
+                        <ItemCount
+                            stock={stock}
+                            initial="1"
+                        />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

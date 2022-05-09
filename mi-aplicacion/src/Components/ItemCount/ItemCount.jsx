@@ -17,13 +17,13 @@ const ItemCount = ({ stock, initial }) => {
 
         <div className="ItemCount">
             <div className="Sub">
-                <button onClick={restar} className="btn btn-primary">-</button>
+                <button onClick={restar}>-</button>
             </div>
             <div className="Qty">
-                <p className='text-center'>{contador}</p>
+                <p>{contador}</p>
             </div>
             <div className="Add">
-                <button onClick={sumar} className="btn btn-primary">+</button>
+                <button onClick={sumar}>+</button>
             </div>
         </div>
     )
